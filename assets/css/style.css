@@ -1,3 +1,8 @@
+*{
+    box-sizing:border box;
+}
+
+
 body{
     
     font-family: 'Comfortaa', cursive;
@@ -71,7 +76,8 @@ a:link{
 }
 
 .container{
-    width:960px;
+    width:100%;
+    max-width: 960px;
     margin: 0 auto;
     padding: 30px;
     background-color: rgb(230, 231, 220,.7);
@@ -128,7 +134,7 @@ vs about and portfolio--refer back to fix
 
 
 footer{
-    clear: left;
+    clear: both;
     width:960px;
     height:100%;
     margin:0px auto;
@@ -136,7 +142,7 @@ footer{
     padding:15px;
     background-color: #666666;
     position:relative;
-   
+    border-top: 8px; solid #4aaaa5;
 }
 
 /*
@@ -185,39 +191,53 @@ input[type=submit]:hover {
     margin:0px auto;
 }
 
-/*
-To Follow: styling for Portfolio
-*/
+/*To Follow: styling for Portfolio*/
 
-div.gallery {
-    margin: 20px;
-    border: 0px solid #ccc;
+.gallery {
+    margin: 20px 0 25px;
     float: left;
-    width: 180px;
+    width: 274px;
     position: relative;
+    overflow: auto;
 }
 
-/* div.gallery:hover {
-    border: 1px solid #777;
-} */
+.gallery:nth-child(even){
+    margin-right: 40px;
+}
+   
 
-div.gallery img {
+
+.gallery img {
     width: 100%;
-    height: 100%;
+    border: 0 none;
+    opacity: .8;
   
 }
 
-div.desc {
-    padding: 3px;
-    text-align: center;
-    color: white;
-    background-color: #4aaaa5;
-    position: absolute;
-    bottom:30px;
-    width:174px;
-    
-   
+.auth-image{
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+    float: left;
+    margin-right: 25px;
 }
+
+.desc{
+    border-bottom: 0;
+    background: #4aaaa5;
+    color: white;
+    text-align: center;
+    bottom:20px;
+    padding: 15px;
+    position: absolute;
+    width:100%;
+    line-height: 30px;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+
+
 
 /* Icons */
 #fa fa-address-card{
